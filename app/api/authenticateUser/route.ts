@@ -1,7 +1,6 @@
-import { access } from "fs";
 import { makeUniversalSearch } from "psn-api";
 
-export async function GET(req) {
+export async function GET(req: Request) {
   try {
     // Extract the access token and username from the request headers or body
     const accessToken = req.headers.get("Token");

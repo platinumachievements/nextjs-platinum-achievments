@@ -1,7 +1,7 @@
 import { exchangeNpssoForCode, exchangeCodeForAccessToken } from "psn-api";
 
 // Handler for POST request
-export async function GET(req) {
+export async function GET(req: Request) {
   try {
     // Extract the NPSSO token from the request body
     const npsso = req.headers.get("npsso");
