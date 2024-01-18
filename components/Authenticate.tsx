@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { AuthenticationProps } from "@/app/types";
 
-export function Authenticate({ setParentData }) {
+export function Authenticate({ setParentData }: AuthenticationProps) {
   const [loading, setLoading] = useState(false);
 
   const handleClick = async () => {

@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { GetUserIdProps } from "@/app/types";
 
-export function GetUserId({ setParentData, data }) {
+export function GetUserId({ setParentData, data }: GetUserIdProps) {
   const [username, setUsername] = useState("");
   const [userLoading, setUserLoading] = useState(false);
 
