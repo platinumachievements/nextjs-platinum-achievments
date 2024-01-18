@@ -12,14 +12,19 @@ export function Authenticate({ setParentData }: AuthenticationProps) {
       return;
     }
     try {
-      const response = await fetch("/api/auth", {
-        method: "GET",
-        headers: {
-          npsso: process.env.NEXT_PUBLIC_NPSSO,
-        },
-      });
-      const jsonData = await response.json();
-      setParentData(jsonData);
+      setLoading(true);
+      try {
+        const response = await fetch("/api/auth", {
+          method: "GET",
+          headers: {
+            npsso: process.env.NEXT_PUBLIC_NPSSO,
+          },
+        });
+        const jsonData = await response.json();
+        setParentData(jsonData);
+      } catch (error) {
+        console.error("Error:", error);
+      }
     } catch (error) {
       console.error("Error:", error);
     } finally {
