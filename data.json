@@ -1,0 +1,14 @@
+[
+  {
+    "name": "testname",
+    "type": "testtype",
+    "version": "1.0.0",
+    "description": "testdes"
+  },
+  {
+    "name": "test2name",
+    "type": "test2type",
+    "version": "2.0.0",
+    "description": "test2des"
+  }
+]
